@@ -53,6 +53,9 @@ body {
 input {
   display: none;
 }
+label {
+  cursor: pointer;
+}
 .title {
   color: rgb(189, 51, 51);
   font-size: 1.5rem;
@@ -178,6 +181,19 @@ input[id^=mem-]:checked~ .accodeon-header .accordeon-title {
 }
 }
 
+@media screen and (max-width: 560px) {
+  .mem {
+    margin-top: 0.2rem;
+    height: 10.5rem;
+  }
+  input[id^=mem-]:checked~ .accordeon-inner {
+    height: 11rem;
+  }
+  .accordeon-element:active .accordeon-inner {
+    height: 11rem;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .title {
     font-size: 0.7rem;
@@ -198,15 +214,6 @@ input[id^=mem-]:checked~ .accodeon-header .accordeon-title {
   .main {
     padding: 0.5rem;
   }
-  .mem {
-    margin-top: 0.2rem;
-    height: 10.5rem;
-  }
-  input[id^=mem-]:checked~ .accordeon-inner {
-    height: 11rem;
-  }
-  .accordeon-element:active .accordeon-inner {
-    height: 11rem;
-  }
+
 }
 
